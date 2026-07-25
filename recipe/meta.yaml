@@ -1,5 +1,5 @@
 {% set name = "hpp-manipulation" %}
-{% set version = "7.0.0" %}
+{% set version = "9.0.2" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/humanoid-path-planner/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 506ba16f8b7a66dc701dbd80359c486fdb912ca369a19397af44817900e3b82e
+  sha256: c262d1fb0a65d5e7d90eadd90d3aa109abb32909bd5c603a3e879e909b14f420
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x.x') }}
